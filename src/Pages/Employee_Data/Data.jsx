@@ -14,6 +14,7 @@ import {
     Paper,
     Typography
 } from '@mui/material';
+import { idID } from '@mui/material/locale';
 
 function DataTable() {
     const [employees, setEmployees] = useState([]);
@@ -33,10 +34,20 @@ function DataTable() {
         // handle edit logic
     };
 
-    const handleDelete = (employee) => {
-        // handle delete logic
+    const handleDelete = (id) => {
+        fetch(`http://localhost:3000/data/${id}`, {
+            method: 'DELETE'
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+                // update the employees state by filtering out the deleted employee
+                setEmployees(employees.filter(e => e.id !== id));
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
     };
-
     return (
         <>
             <Navbar />
@@ -49,7 +60,7 @@ function DataTable() {
             <TableContainer component={Paper}>
                 <Table>
                     <TableHead>
-                        <TableRow>
+                        <TableRow style={{ background: "#92C7F3" }}>
                             <TableCell>Name</TableCell>
                             <TableCell>Email</TableCell>
                             <TableCell>Phone</TableCell>
@@ -70,7 +81,8 @@ function DataTable() {
                                 <TableCell>{e.hobbies}</TableCell>
                                 <TableCell>
                                     <Button variant="contained" color="primary" onClick={() => handleEdit(e)}><EditOutlinedIcon /></Button>
-                                    <Button variant="contained" color="secondary" onClick={() => handleDelete(e)}><DeleteOutlineTwoToneIcon /></Button>
+                                    <Button variant="contained" color="secondary" onClick={() => handleDelete(e.id)}><DeleteOutlineTwoToneIcon /></Button>
+
                                 </TableCell>
                             </TableRow>
                         ))}

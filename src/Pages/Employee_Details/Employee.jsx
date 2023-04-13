@@ -64,6 +64,7 @@ function Employee() {
     return (
         <div>
             <Navbar />
+            <br />
 
             <Card style={{ maxWidth: 450, margin: "0 auto", padding: "20px 5px" }}>
                 <CardContent>

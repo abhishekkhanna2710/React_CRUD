@@ -1,112 +1,31 @@
 {
-  "data": [
-    {
-      "id": 1,
-      "name": "Abhishek Khanna",
-      "email": "abhikhanna2710@gmail.com",
-      "phone": "8950931355",
-      "dob": "10-01-2001",
-      "gender": "Male",
-      "hobbies": "DSA"
-    },
-    {
-      "name": "Abhishek",
-      "email": "abhi@324956965",
-      "phone": "56269567",
-      "dob": "2023-04-13",
-      "gender": "female",
-      "hobbies": {
-        "cricket": true,
-        "reading": false,
-        "dsa": false
-      },
-      "id": 2
-    },
-    {
-      "name": "Sonia Khanna",
-      "email": "sonia@32gmail.com",
-      "phone": "898522",
-      "dob": "2023-04-14",
-      "gender": "male",
-      "hobbies": {
-        "cricket": true,
-        "reading": false,
-        "dsa": false
-      },
-      "id": 3
-    },
-    {
-      "name": "Cookie",
-      "email": "abhikhana@34",
-      "phone": "856562652",
-      "dob": "2023-04-14",
-      "gender": "other",
-      "hobbies": {
-        "dsa": true
-      },
-      "id": 4
-    },
-    {
-      "name": "Abhishek",
-      "email": "abhi@324",
-      "phone": "195985",
-      "dob": "2023-04-22",
-      "gender": "female",
-      "hobbies": {
-        "reading": true
-      },
-      "id": 5
-    },
-    {
-      "name": "Abhishek",
-      "email": "abhi@324956965",
-      "phone": "8888",
-      "dob": "2023-04-14",
-      "gender": "male",
-      "hobbies": {
-        "cricket": true
-      },
-      "id": 6
-    },
-    {
-      "name": "Bhavya",
-      "email": "abhi@324956965",
-      "phone": "5654695494",
-      "dob": "2023-04-13",
-      "gender": "male",
-      "hobbies": {
-        "cricket": true
-      },
-      "id": 7
-    },
-    {
-      "name": "Lavy",
-      "email": "lavi123@gmail.com",
-      "phone": "8945626",
-      "dob": "2023-04-22",
-      "gender": "male",
-      "hobbies": [
-        "Reading Books"
-      ],
-      "id": 8
-    },
-    {
-      "name": "Abhishek",
-      "email": "abhi@324956965",
-      "phone": "54655",
-      "dob": "2023-04-13",
-      "gender": "male",
-      "hobbies": "DSA",
-      "id": 9
-    },
-    {
-      "name": "Salman khan",
-      "email": "Salman@gmail.com",
-      "phone": "888888",
-      "dob": "2023-04-29",
-      "gender": "male",
-      "hobbies": "DSA",
-      "id": 10
-    }
-  ]
+    "data": [
+        {
+            "id": 1,
+            "name": "Abhishek Khanna",
+            "email": "abhikhanna2710@gmail.com",
+            "phone": "8950931355",
+            "dob": "10-01-2001",
+            "gender": "Male",
+            "hobbies": "DSA"
+        },
+        {
+            "name": "Abhishek",
+            "email": "abhi@324956965",
+            "phone": "54655",
+            "dob": "2023-04-13",
+            "gender": "male",
+            "hobbies": "DSA",
+            "id": 2
+        },
+        {
+            "name": "Salman khan",
+            "email": "Salman@gmail.com",
+            "phone": "888888",
+            "dob": "2023-04-29",
+            "gender": "male",
+            "hobbies": "DSA",
+            "id": 3
+        }
+    ]
 }

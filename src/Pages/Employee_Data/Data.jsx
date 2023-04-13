@@ -14,7 +14,6 @@ import {
     Paper,
     Typography
 } from '@mui/material';
-import { idID } from '@mui/material/locale';
 
 function DataTable() {
     const [employees, setEmployees] = useState([]);
@@ -30,9 +29,25 @@ function DataTable() {
         fetchEmployees();
     }, []);
 
-    const handleEdit = (employee) => {
-        // handle edit logic
+
+    const handleEdit = (id, updatedData) => {
+        fetch(`http://localhost:3000/data/${id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(updatedData)
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+                setEmployees(employees.map(e => e.id === id ? updatedData : e));
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
     };
+
 
     const handleDelete = (id) => {
         fetch(`http://localhost:3000/data/${id}`, {
@@ -41,7 +56,6 @@ function DataTable() {
             .then(response => response.json())
             .then(data => {
                 console.log('Success:', data);
-                // update the employees state by filtering out the deleted employee
                 setEmployees(employees.filter(e => e.id !== id));
             })
             .catch(error => {
@@ -80,7 +94,7 @@ function DataTable() {
                                 <TableCell>{e.gender}</TableCell>
                                 <TableCell>{e.hobbies}</TableCell>
                                 <TableCell>
-                                    <Button variant="contained" color="primary" onClick={() => handleEdit(e)}><EditOutlinedIcon /></Button>
+                                    <Button variant="contained" color="primary" onClick={() => handleEdit(e.id)}><EditOutlinedIcon /></Button>
                                     <Button variant="contained" color="secondary" onClick={() => handleDelete(e.id)}><DeleteOutlineTwoToneIcon /></Button>
 
                                 </TableCell>

@@ -1,15 +1,6 @@
 {
   "data": [
     {
-      "name": "Salman khan",
-      "email": "Salman@gmail.com",
-      "phone": "888888",
-      "dob": "2023-04-29",
-      "gender": "male",
-      "hobbies": "DSA",
-      "id": 3
-    },
-    {
       "name": "Supriya",
       "email": "Supriyamehta@123gmail.com",
       "phone": "4545454548",
@@ -17,6 +8,15 @@
       "gender": "female",
       "hobbies": "Cricket",
       "id": 5
+    },
+    {
+      "name": "Cookie",
+      "email": "abhikhana@34",
+      "phone": "8547912355",
+      "dob": "2023-04-29",
+      "gender": "male",
+      "hobbies": "Reading Books",
+      "id": 6
     }
   ]
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button, FormControl, Typography } from '@mui/material';
-import { Card, CardContent, Grid, InputLabel, Input, FormHelperText } from '@mui/material';
-import { FilledInput, TextField } from '@mui/material';
+import { Card, CardContent, Grid, Radio, Checkbox, FormGroup } from '@mui/material';
+import { FormLabel, FormControlLabel, RadioGroup, TextField } from '@mui/material';
 
 
 function Employee() {
@@ -29,6 +29,30 @@ function Employee() {
 
                             <Grid item xs={12} sm={12}>
                                 <TextField type='date' variant="outlined" fullWidth required />
+                            </Grid>
+                            <Grid item xs={12} sm={12}>
+                                <FormControl>
+                                    <FormLabel id="demo-radio-buttons-group-label">Gender</FormLabel>
+                                    <RadioGroup row
+                                        aria-labelledby="demo-radio-buttons-group-label"
+                                        defaultValue="female"
+                                        name="radio-buttons-group"
+                                    >
+                                        <FormControlLabel value="female" control={<Radio />} label="Female" />
+                                        <FormControlLabel value="male" control={<Radio />} label="Male" />
+                                        <FormControlLabel value="other" control={<Radio />} label="Other" />
+                                    </RadioGroup>
+                                </FormControl>
+                            </Grid>
+
+                            <Grid item xs={12} sm={12}>
+                                <Typography>Hobbies</Typography>
+                                <FormGroup>
+                                    <FormControlLabel control={<Checkbox />} label="Cricket" />
+                                    <FormControlLabel control={<Checkbox />} label="Reading Books" />
+                                    <FormControlLabel control={<Checkbox />} label="DSA" />
+
+                                </FormGroup>
                             </Grid>
 
                             <Grid item xs={12} sm={12}>

@@ -1,31 +1,58 @@
 {
-    "data": [
-        {
-            "id": 1,
-            "name": "Abhishek Khanna",
-            "email": "abhikhanna2710@gmail.com",
-            "phone": "8950931355",
-            "dob": "10-01-2001",
-            "gender": "Male",
-            "hobbies": "DSA"
-        },
-        {
-            "name": "Abhishek",
-            "email": "abhi@324956965",
-            "phone": "54655",
-            "dob": "2023-04-13",
-            "gender": "male",
-            "hobbies": "DSA",
-            "id": 2
-        },
-        {
-            "name": "Salman khan",
-            "email": "Salman@gmail.com",
-            "phone": "888888",
-            "dob": "2023-04-29",
-            "gender": "male",
-            "hobbies": "DSA",
-            "id": 3
-        }
-    ]
+  "data": [
+    {
+      "id": 1,
+      "name": "Abhishek Khanna",
+      "email": "abhikhanna2710@gmail.com",
+      "phone": "8950931355",
+      "dob": "10-01-2001",
+      "gender": "Male",
+      "hobbies": "DSA"
+    },
+    {
+      "name": "Abhishek",
+      "email": "abhi@324956965",
+      "phone": "54655",
+      "dob": "2023-04-13",
+      "gender": "male",
+      "hobbies": "DSA",
+      "id": 2
+    },
+    {
+      "name": "Salman khan",
+      "email": "Salman@gmail.com",
+      "phone": "888888",
+      "dob": "2023-04-29",
+      "gender": "male",
+      "hobbies": "DSA",
+      "id": 3
+    },
+    {
+      "name": "Rahul",
+      "email": "rahul@123gmail.com",
+      "phone": "9594561355",
+      "dob": "2023-05-12",
+      "gender": "female",
+      "hobbies": "Cricket",
+      "id": 4
+    },
+    {
+      "name": "Supriya",
+      "email": "Supriyamehta@123gmail.com",
+      "phone": "4545454548",
+      "dob": "2023-04-08",
+      "gender": "female",
+      "hobbies": "Cricket",
+      "id": 5
+    },
+    {
+      "name": "Rmana",
+      "email": "Ty@42r6",
+      "phone": "48524163",
+      "dob": "2023-04-13",
+      "gender": "female",
+      "hobbies": "Cricket",
+      "id": 6
+    }
+  ]
 }

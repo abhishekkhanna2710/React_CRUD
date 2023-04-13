@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Button, FormControl, Typography } from '@mui/material';
 import { Card, CardContent, Grid, Radio, Checkbox, FormGroup } from '@mui/material';
 import { FormLabel, FormControlLabel, RadioGroup, TextField } from '@mui/material';
+import Navbar from '../../Components/Navbar/Navbar';
 import "../../db.json";
 
 function Employee() {
@@ -62,8 +63,8 @@ function Employee() {
 
     return (
         <div>
+            <Navbar />
 
-            <br />
             <Card style={{ maxWidth: 450, margin: "0 auto", padding: "20px 5px" }}>
                 <CardContent>
                     <Typography gutterBottom={true} align='center' variant='h5'>Employer details</Typography>

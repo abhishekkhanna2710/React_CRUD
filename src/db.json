@@ -1,22 +1,13 @@
 {
   "data": [
     {
-      "name": "Supriya",
-      "email": "Supriyamehta@123gmail.com",
-      "phone": "4545454548",
-      "dob": "2023-04-08",
+      "name": "Abhishek",
+      "email": "ghshgs@ghgbhj",
+      "phone": "62616163",
+      "dob": "2023-04-06",
       "gender": "female",
       "hobbies": "Cricket",
-      "id": 5
-    },
-    {
-      "name": "Cookie",
-      "email": "abhikhana@34",
-      "phone": "8547912355",
-      "dob": "2023-04-29",
-      "gender": "male",
-      "hobbies": "Reading Books",
-      "id": 6
+      "id": 7
     }
   ]
 }

@@ -23,7 +23,7 @@ function Navbar() {
 
                     <Stack direction="row" spacing={2}>
                         <Button color='inherit'> <Link style={NavStyle} to="/">Details</Link></Button>
-                        <Button color='inherit'>  <Link style={NavStyle} to="/data">Data</Link></Button>
+                        <Button color='inherit'>  <Link style={NavStyle} to="/Employee_Data">Data</Link></Button>
                     </Stack>
                 </Toolbar>
 

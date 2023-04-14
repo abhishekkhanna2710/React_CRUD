@@ -1,7 +1,10 @@
+import React from 'react';
 import { useState, useEffect } from 'react';
 import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 import DeleteOutlineTwoToneIcon from '@mui/icons-material/DeleteOutlineTwoTone';
 import Navbar from '../../Components/Navbar/Navbar';
+import { useNavigate } from 'react-router-dom';
+
 
 import {
     TableContainer,
@@ -12,11 +15,14 @@ import {
     TableBody,
     Button,
     Paper,
-    Typography
+    Typography,
+    TextField
 } from '@mui/material';
 
 function DataTable() {
+    const navigate = useNavigate();
     const [employees, setEmployees] = useState([]);
+
 
     useEffect(() => {
         const fetchEmployees = async () => {
@@ -30,24 +36,34 @@ function DataTable() {
     }, []);
 
 
-    const handleEdit = (id, updatedData) => {
-        fetch(`http://localhost:3000/data/${id}`, {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(updatedData)
-        })
-            .then(response => response.json())
-            .then(data => {
-                console.log('Success:', data);
-                setEmployees(employees.map(e => e.id === id ? updatedData : e));
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
+
+
+    const handleUpdate = (id) => {
+        navigate(`/edit/${id}`);
     };
 
+
+    // const handleUpdate = (id, updatedData) => {
+    //     fetch(`http://localhost:3000/data/${id}`, {
+    //         method: 'PUT',
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         },
+    //         body: JSON.stringify(updatedData)
+    //     })
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             console.log('Success:', data);
+    //             setEmployees(employees.map(e => e.id === id ? updatedData : e));
+    //             setShowEditModal(false);
+    //         })
+    //         .catch(error => {
+    //             console.error('Error:', error);
+    //         });
+    // };
+
+
+    //Delete functionality
 
     const handleDelete = (id) => {
         fetch(`http://localhost:3000/data/${id}`, {
@@ -94,8 +110,11 @@ function DataTable() {
                                 <TableCell>{e.gender}</TableCell>
                                 <TableCell>{e.hobbies}</TableCell>
                                 <TableCell>
-                                    <Button variant="contained" color="primary" onClick={() => handleEdit(e.id)}><EditOutlinedIcon /></Button>
+                                    <Button variant="contained" color="primary" onClick={() => handleUpdate(e.id)}><EditOutlinedIcon /></Button>
                                     <Button variant="contained" color="secondary" onClick={() => handleDelete(e.id)}><DeleteOutlineTwoToneIcon /></Button>
+
+
+
 
                                 </TableCell>
                             </TableRow>

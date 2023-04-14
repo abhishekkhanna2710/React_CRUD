@@ -53,6 +53,15 @@
       "gender": "male",
       "hobbies": "Cricket",
       "id": 12
+    },
+    {
+      "name": "Ankush",
+      "email": "abhi23@gmail.com",
+      "phone": "895624556",
+      "dob": "2023-04-21",
+      "gender": "male",
+      "hobbies": "DSA",
+      "id": 13
     }
   ]
 }

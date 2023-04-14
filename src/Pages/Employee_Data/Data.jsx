@@ -29,7 +29,7 @@ function DataTable() {
 
     useEffect(() => {
         const fetchEmployees = async () => {
-            const response = await fetch('http://localhost:3000/data');
+            const response = await fetch('https://agreeable-pear-swordfish.cyclic.app/data');
             const data = await response.json();
             setEmployees(data);
             console.log(data)
@@ -47,7 +47,7 @@ function DataTable() {
     //Delete functionality
 
     const handleDelete = (id) => {
-        fetch(`http://localhost:3000/data/${id}`, {
+        fetch(`https://agreeable-pear-swordfish.cyclic.app/data/${id}`, {
             method: 'DELETE'
         })
             .then(response => response.json())
@@ -56,7 +56,7 @@ function DataTable() {
                 setEmployees(employees.filter(e => e.id !== id));
             })
             .catch(error => {
-                console.error('Error:', error);
+                console.log('Error:', error);
             });
     };
     return (

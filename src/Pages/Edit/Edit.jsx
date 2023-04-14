@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Typography, TextField, Button, Grid, Card, CardContent } from '@mui/material';
 import Navbar from '../../Components/Navbar/Navbar';
+// import { redirect } from "react-router-dom";
 function Edit() {
     const navigate = useNavigate();
     const { id } = useParams();
@@ -9,12 +10,11 @@ function Edit() {
     const [employee, setEmployee] = useState({});
 
     useEffect(() => {
-        fetch(`http://localhost:3000/data/${id}`)
+        fetch(`https://agreeable-pear-swordfish.cyclic.app/data/${id}`)
             .then(response => response.json())
             .then(data => {
                 console.log('Success:', data);
                 setEmployee(data);
-
             })
             .catch(error => {
                 console.error('Error:', error);
@@ -26,8 +26,8 @@ function Edit() {
         setEmployee({ ...employee, [name]: value });
     };
 
-    const handleUpdate = () => {
-        fetch(`http://localhost:3000/data/${id}`, {
+    const handleUpdate = (e) => {
+        fetch(`https://agreeable-pear-swordfish.cyclic.app/data/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -37,10 +37,12 @@ function Edit() {
             .then(response => response.json())
             .then(data => {
                 console.log('Success:', data);
-                navigate('/Employee_Data');
+                alert("Go to data");
             })
             .catch(error => {
                 console.error('Error:', error);
+                navigate('/Employee_Data');
+                ;
             });
     };
 

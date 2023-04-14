@@ -5,7 +5,7 @@ import { Card, CardContent, Grid, Radio, Checkbox, FormGroup } from '@mui/materi
 import { FormLabel, FormControlLabel, RadioGroup, TextField } from '@mui/material';
 import Navbar from '../../Components/Navbar/Navbar';
 import { useNavigate } from 'react-router-dom';
-import "../../db.json";
+// import "../../db.json";
 
 function Employee() {
     const navigate = useNavigate();
@@ -53,7 +53,7 @@ function Employee() {
             })(),
         };
 
-        fetch('http://localhost:3000/data', {
+        fetch('https://agreeable-pear-swordfish.cyclic.app/data', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -67,6 +67,7 @@ function Employee() {
             })
             .catch((error) => {
                 console.error('Error:', error);
+                navigate("/Employee_Data")
             });
         // console.log(formData);
     };

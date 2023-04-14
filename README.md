@@ -1,7 +1,5 @@
 # CRUD Operations with Material UI
 
-<h5>This is basically the react app I creating and data is stored from JSON Server.I also used Material UI</h5>
-
 The deploy link for users https://employeeinfor.netlify.app/
 
  <ins>The Features Developed: </ins>

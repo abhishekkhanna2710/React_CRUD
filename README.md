@@ -8,13 +8,8 @@ The deploy link for users https://employeeinfor.netlify.app/
    <li>Form page  </li>
    <li>Data Page</li>
  </ul>
-  
-  
-  # tericsoft-task1
 
-#### <a href="https://employee-kappa.vercel.app/">Click to see Live Demo</a>
-
-### `About the Assignment`
+### The Experience of Project
 
 This assignment is a CRUD (Create, Read, Update, Delete) operation for an Employee with six fields: 
 name, email, phone, date of birth (dob), gender, and hobbies. The name, email, and phone fields are input boxes,
@@ -29,36 +24,25 @@ This project aims to provide a clean and modern interface that is easy to use an
 <br />
 
 ### Backend API Reference
-
-| Request            | Route     | Links   |
-| :------------------- | :------- | :------------ |
-| `GET`           | `Get all employee records` | **https://tericsoft-fake-backend.onrender.com/employee**. |
-| `POST`              | `To create new emp. data`  | **https://tericsoft-fake-backend.onrender.com/employee**. |
-| `PATCH`        | `To update a employee's profile` | **https://tericsoft-fake-backend.onrender.com/employee/:id**. |
-| `DELETE` | `To delete a employee's record` | **https://tericsoft-fake-backend.onrender.com/employee/:id**. |
-
+In backend part I used json server which typically perform CRUD Functionality.
 <br />
 
 ### `Tech Stack`
 
 **Frontend:** `React, Material-UI`
 
-**Backend:** `Fake JSON Backend Server deployed on Render`
+**Backend:** `JSON Server deployed on cyclic`
 
 <br />
-## Run Locally
+## If you have to run in your system(Locally)
 
-Clone the project
-
-```bash
-  git clone https://github.com/Nitesh-Samaniya/tericsoft-task1.git
-```
-
-Go to the project directory
+You should have to clone this repo
 
 ```bash
-  cd task1
+https://github.com/abhishekkhanna2710/React_CRUD.git
 ```
+
+Now open the terminal
 
 Install dependencies
 
@@ -69,10 +53,10 @@ Install dependencies
 Start the server
 
 ```bash
-  npm run start
+  npm run dev
 ```
+### Overview of the Project
 
-  <ins>The Experience of Project :</ins> <br/><br/>
 
 <h2>Firstly You should have to fill your Details and then Submit</h2>
 

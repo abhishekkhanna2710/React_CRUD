@@ -11,15 +11,9 @@ The deploy link for users https://employeeinfor.netlify.app/
 
 ### The Experience of Project
 
-This assignment is a CRUD (Create, Read, Update, Delete) operation for an Employee with six fields: 
-name, email, phone, date of birth (dob), gender, and hobbies. The name, email, and phone fields are input boxes,
-while the dob field is a date picker. The gender field is a set of radio buttons, and the hobbies field is a set of checkboxes.
+This task has name, email, phone, date of birth (dob), gender, and hobbies fields are all part of this assignment, which is a CRUD (Create, Read, Update, Delete) activity for an Employee. The dob field is a date picker, whereas the name, email, and phone fields are input boxes. The hobbies area has a set of checkboxes, while the gender field has a set of radio buttons.
+In this project, the form is built using Material UI Form Controls, the data is displayed using a Data Table, and the employees are added and edited using Modals. The project also incorporates a bogus backend server called JSON server.
 
-This project uses Material UI Form Controls to build the form, a Data Table to display data, and Modals to add and edit employees. 
-Additionally, the project integrates with a fake backend server.
-
-The goal of this project is to create a user-friendly interface for managing employee data that allows users to add, edit, and delete employees. 
-This project aims to provide a clean and modern interface that is easy to use and understand.
 
 <br />
 

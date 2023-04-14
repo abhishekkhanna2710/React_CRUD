@@ -20,6 +20,9 @@ import {
 } from '@mui/material';
 
 function DataTable() {
+    const tableStyle = {
+        background: "#92C7F3"
+    }
     const navigate = useNavigate();
     const [employees, setEmployees] = useState([]);
 
@@ -36,31 +39,9 @@ function DataTable() {
     }, []);
 
 
-
-
     const handleUpdate = (id) => {
         navigate(`/edit/${id}`);
     };
-
-
-    // const handleUpdate = (id, updatedData) => {
-    //     fetch(`http://localhost:3000/data/${id}`, {
-    //         method: 'PUT',
-    //         headers: {
-    //             'Content-Type': 'application/json'
-    //         },
-    //         body: JSON.stringify(updatedData)
-    //     })
-    //         .then(response => response.json())
-    //         .then(data => {
-    //             console.log('Success:', data);
-    //             setEmployees(employees.map(e => e.id === id ? updatedData : e));
-    //             setShowEditModal(false);
-    //         })
-    //         .catch(error => {
-    //             console.error('Error:', error);
-    //         });
-    // };
 
 
     //Delete functionality
@@ -90,14 +71,14 @@ function DataTable() {
             <TableContainer component={Paper}>
                 <Table>
                     <TableHead>
-                        <TableRow style={{ background: "#92C7F3" }}>
-                            <TableCell>Name</TableCell>
-                            <TableCell>Email</TableCell>
-                            <TableCell>Phone</TableCell>
-                            <TableCell>DOB</TableCell>
-                            <TableCell>Gender</TableCell>
-                            <TableCell>Hobbies</TableCell>
-                            <TableCell>Action</TableCell>
+                        <TableRow style={tableStyle}>
+                            <TableCell><b>Name</b></TableCell>
+                            <TableCell><b>Email</b></TableCell>
+                            <TableCell><b>Phone</b></TableCell>
+                            <TableCell><b>DOB</b></TableCell>
+                            <TableCell><b>Gender</b></TableCell>
+                            <TableCell><b>Hobbies</b></TableCell>
+                            <TableCell><b>Actions</b></TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>

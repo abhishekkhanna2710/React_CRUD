@@ -4,9 +4,18 @@ import { Button, FormControl, Typography } from '@mui/material';
 import { Card, CardContent, Grid, Radio, Checkbox, FormGroup } from '@mui/material';
 import { FormLabel, FormControlLabel, RadioGroup, TextField } from '@mui/material';
 import Navbar from '../../Components/Navbar/Navbar';
+import { useNavigate } from 'react-router-dom';
 import "../../db.json";
 
 function Employee() {
+    const navigate = useNavigate();
+    const formStyle = {
+        maxWidth: 450,
+        margin: "0 auto",
+        padding: "20px 5px",
+        boxShadow: "0 2px 3px 4px lightblue"
+    }
+
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
@@ -54,15 +63,12 @@ function Employee() {
             .then(response => response.json())
             .then(data => {
                 console.log('Success:', data);
+                navigate("/Employee_Data")
             })
             .catch((error) => {
                 console.error('Error:', error);
             });
         // console.log(formData);
-
-
-
-
     };
 
 
@@ -75,7 +81,7 @@ function Employee() {
             <Navbar />
             <br />
 
-            <Card style={{ maxWidth: 450, margin: "0 auto", padding: "20px 5px" }}>
+            <Card style={formStyle}>
                 <CardContent>
                     <Typography gutterBottom={true} align='center' variant='h5'>Employer details</Typography>
                     <form onSubmit={handleSubmit}>
@@ -143,7 +149,7 @@ function Employee() {
             <br />
 
 
-        </div>
+        </div >
     )
 }
 

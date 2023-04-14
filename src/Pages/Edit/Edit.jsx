@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { TextField, Button } from '@mui/material';
-
+import { Typography, TextField, Button, Grid, Card, CardContent } from '@mui/material';
+import Navbar from '../../Components/Navbar/Navbar';
 function Edit() {
     const navigate = useNavigate();
     const { id } = useParams();
@@ -46,30 +46,38 @@ function Edit() {
 
     return (
         <>
-            <h2>Edit Employee</h2>
-            <form>
-                <div>
-                    <TextField name="name" label="Name" value={employee.name} onChange={handleInputChange} />
-                </div>
-                <div>
-                    <TextField name="email" label="Email" value={employee.email} onChange={handleInputChange} />
-                </div>
-                <div>
-                    <TextField name="phone" label="Phone" value={employee.phone} onChange={handleInputChange} />
-                </div>
-                <div>
-                    <TextField name="dob" label="DOB" value={employee.dob} onChange={handleInputChange} />
-                </div>
-                <div>
-                    <TextField name="gender" label="Gender" value={employee.gender} onChange={handleInputChange} />
-                </div>
-                <div>
-                    <TextField name="hobbies" label="Hobbies" value={employee.hobbies} onChange={handleInputChange} />
-                </div>
-                <div>
-                    <Button variant="contained" color="primary" onClick={handleUpdate}>Update</Button>
-                </div>
-            </form>
+            <Navbar />
+            <br />
+            <Card style={{ maxWidth: 450, margin: "0 auto", padding: "20px 5px" }}>
+                <CardContent>
+                    <Typography gutterBottom={true} align='center' variant='h5'>Update Data</Typography>
+                    <form>
+                        <Grid container spacing={1}>
+                            <Grid item xs={12} sm={12}>
+                                <TextField name="name" value={employee.name} onChange={handleInputChange} fullWidth />
+                            </Grid>
+                            <Grid item xs={12} sm={12}>
+                                <TextField name="email" value={employee.email} onChange={handleInputChange} fullWidth />
+                            </Grid>
+                            <Grid item xs={12} sm={12}>
+                                <TextField name="phone" value={employee.phone} onChange={handleInputChange} fullWidth />
+                            </Grid>
+                            <Grid item xs={12} sm={12}>
+                                <TextField name="dob" value={employee.dob} onChange={handleInputChange} fullWidth />
+                            </Grid>
+                            <Grid item xs={12} sm={12}>
+                                <TextField name="gender" value={employee.gender} onChange={handleInputChange} fullWidth />
+                            </Grid>
+                            <Grid item xs={12} sm={12}>
+                                <TextField name="hobbies" value={employee.hobbies} onChange={handleInputChange} fullWidth />
+                            </Grid>
+                            <Grid item xs={12} sm={12}>
+                                <Button variant="contained" color="primary" onClick={handleUpdate}>Update</Button>
+                            </Grid>
+                        </Grid >
+                    </form>
+                </CardContent>
+            </Card>
         </>
     );
 }

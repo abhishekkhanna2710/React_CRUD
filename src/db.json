@@ -2,12 +2,57 @@
   "data": [
     {
       "name": "Abhishek",
-      "email": "ghshgs@ghgbhj",
-      "phone": "62616163",
-      "dob": "2023-04-06",
-      "gender": "female",
-      "hobbies": "Cricket",
+      "email": "abhikhanna2710gmail.com",
+      "phone": "589647825",
+      "dob": "2043-04-06",
+      "gender": "male",
+      "hobbies": "WWE",
       "id": 7
+    },
+    {
+      "name": "Rashi",
+      "email": "rashi@13gmail.com",
+      "phone": "8950931355",
+      "dob": "2023-04-13",
+      "gender": "female",
+      "hobbies": "Reading Books",
+      "id": 8
+    },
+    {
+      "name": "Raj",
+      "email": "rahveer@34gmail.com",
+      "phone": "8957841256",
+      "dob": "2023-04-20",
+      "gender": "male",
+      "hobbies": "DSA",
+      "id": 9
+    },
+    {
+      "name": "Deepak",
+      "email": "deespak34@gamil.com",
+      "phone": "9303631066",
+      "dob": "2023-04-15",
+      "gender": "male",
+      "hobbies": "Cricket",
+      "id": 10
+    },
+    {
+      "name": "Simran",
+      "email": "simranD@gmail.com",
+      "phone": "5478913256",
+      "dob": "2023-04-15",
+      "gender": "male",
+      "hobbies": "DSA",
+      "id": 11
+    },
+    {
+      "name": "Jawan",
+      "email": "jawan67@gmail.com",
+      "phone": "978435789",
+      "dob": "2023-04-29",
+      "gender": "male",
+      "hobbies": "Cricket",
+      "id": 12
     }
   ]
 }

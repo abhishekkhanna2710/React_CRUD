@@ -17,7 +17,7 @@ In this project, the form is built using Material UI Form Controls, the data is 
 
 <br />
 
-### Backend API Reference
+### Server Part
 In backend part I used json server which typically perform CRUD Functionality.
 <br />
 

@@ -53,7 +53,7 @@ function Employee() {
             })(),
         };
 
-        fetch('https://agreeable-pear-swordfish.cyclic.app/data', {
+        fetch('https://crud-json-fjvr.onrender.com/data', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

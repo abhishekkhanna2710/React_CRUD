@@ -6,6 +6,7 @@ import Navbar from '../../Components/Navbar/Navbar';
 import { useNavigate } from 'react-router-dom';
 
 
+
 import {
     TableContainer,
     Table,
@@ -16,7 +17,6 @@ import {
     Button,
     Paper,
     Typography,
-    TextField
 } from '@mui/material';
 
 function DataTable() {
@@ -25,18 +25,19 @@ function DataTable() {
     }
     const navigate = useNavigate();
     const [employees, setEmployees] = useState([]);
+    const [state, setState] = useState(false);
 
 
     useEffect(() => {
         const fetchEmployees = async () => {
-            const response = await fetch('https://agreeable-pear-swordfish.cyclic.app/data');
+            const response = await fetch('https://crud-json-fjvr.onrender.com/data');
             const data = await response.json();
             setEmployees(data);
             console.log(data)
         };
 
         fetchEmployees();
-    }, []);
+    }, [state]);
 
 
     const handleUpdate = (id) => {
@@ -47,7 +48,7 @@ function DataTable() {
     //Delete functionality
 
     const handleDelete = (id) => {
-        fetch(`https://agreeable-pear-swordfish.cyclic.app/data/${id}`, {
+        fetch(`https://crud-json-fjvr.onrender.com/data/${id}`, {
             method: 'DELETE'
         })
             .then(response => response.json())
@@ -57,6 +58,7 @@ function DataTable() {
             })
             .catch(error => {
                 console.log('Error:', error);
+                setState(!state);
             });
     };
     return (

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Typography, TextField, Button, Grid, Card, CardContent } from '@mui/material';
 import Navbar from '../../Components/Navbar/Navbar';
+import axios from 'axios';
 // import { redirect } from "react-router-dom";
 function Edit() {
     const navigate = useNavigate();
@@ -10,7 +11,7 @@ function Edit() {
     const [employee, setEmployee] = useState({});
 
     useEffect(() => {
-        fetch(`https://agreeable-pear-swordfish.cyclic.app/data/${id}`)
+        fetch(`https://crud-json-fjvr.onrender.com/data/${id}`)
             .then(response => response.json())
             .then(data => {
                 console.log('Success:', data);
@@ -26,23 +27,37 @@ function Edit() {
         setEmployee({ ...employee, [name]: value });
     };
 
+    // const handleUpdate = (e) => {
+    //     fetch(`https://agreeable-pear-swordfish.cyclic.app/data/${id}`, {
+    //         method: 'PUT',
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         },
+    //         body: JSON.stringify(employee)
+    //     })
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             console.log('Success:', data);
+    //             alert("Go to data");
+    //         })
+    //         .catch(error => {
+    //             console.error('Error:', error);
+    //             navigate('/Employee_Data');
+    //             ;
+    //         });
+    // };
     const handleUpdate = (e) => {
-        fetch(`https://agreeable-pear-swordfish.cyclic.app/data/${id}`, {
-            method: 'PUT',
+        axios.put(`https://crud-json-fjvr.onrender.com/data/${id}`, employee, {
             headers: {
                 'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(employee)
+            }
         })
-            .then(response => response.json())
-            .then(data => {
-                console.log('Success:', data);
-                alert("Go to data");
+            .then(response => {
+                console.log('Success:', response.data);
+                navigate('/Employee_Data');
             })
             .catch(error => {
                 console.error('Error:', error);
-                navigate('/Employee_Data');
-                ;
             });
     };
 

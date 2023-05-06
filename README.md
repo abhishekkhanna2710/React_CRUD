@@ -30,7 +30,7 @@ In backend part I used json server which typically perform CRUD Functionality.
 <br />
 ## If you have to run in your system(Locally)
 
-You should have to clone this repo
+You should have to clone this repo 
 
 ```bash
 https://github.com/abhishekkhanna2710/React_CRUD.git

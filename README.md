@@ -23,7 +23,7 @@ In backend part I used json server which typically perform CRUD Functionality.
 
 ### `Tech Stack`
 
-**Frontend:** `React, Material-UI`
+**Frontend:** `React, Material-UI` 
 
 **Backend:** `JSON Server deployed on cyclic`
 
